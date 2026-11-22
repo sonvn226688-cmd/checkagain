@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PLT T10 - Bảng Plywood</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="phone">
+<header class="top">
+<h1>PLT T10 - <span id="count">...</span> dòng</h1>
+<p>Kéo xuống xem hết - Tiêu đề đứng yên - Nhấn vào dòng để mở rộng</p>
+<input id="q" type="search" placeholder="Tìm Cty / Tên hàng...">
+<input id="qLoai" type="search" placeholder="Search theo loại ván: Film / Red / Thường..." class="input-loai">
+<div class="flex">
+<select id="fLoai"><option value="">Loại: Tất cả</option><option>Film</option><option>Red</option><option>Thường</option></select>
+<select id="fKT"><option value="">KT: Tất cả</option></select>
+<button id="btnAuto" type="button">Tự giãn</button>
+</div>
+<p class="hint">Bấm <b>Loại</b> / <b>KT</b> / <b>Đơn giá</b> để sắp xếp. Cột giá chỉ có mũi tên</p>
+</header>
+<div class="wrap">
+<table>
+<thead><tr>
+<th id="thLoai">Loại <span id="aLoai">↕</span></th>
+<th id="thKT">KT <span id="aKT">↕</span></th>
+<th>Tên hàng</th>
+<th>Cty nhập</th>
+<th>Cty xuất</th>
+<th id="thGia" class="sortable">Đơn giá<br>Nguyên tệ <span id="aGia">▼</span></th>
+<th>Nguyên tệ</th>
+<th>term</th>
+<th>vận chuyển</th>
+</tr></thead>
+<tbody id="tbody"></tbody>
+</table>
+<div class="end">— Hết dữ liệu —</div>
+</div>
+</div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
